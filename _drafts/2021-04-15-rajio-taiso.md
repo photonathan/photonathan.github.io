@@ -6,7 +6,7 @@ background: /assets/img/posts/Rajio_Taiso/4S0A0496.jpg
 ---
 
 ## Background
-I never thought my love of Studio Ghibli films would improve my day-to-day experience working from home. 
+I never thought my love of Studio Ghibli would make working from home better... 
 
 I first learned of Rajio Taiso (Radio Calisthenics) from watching the 2013 documentary 'The Kingdom of Dreams and Madness.' The documentary gives viewers a behind the scenes look into the Japanese offices of Studio Ghibli as they work on the films 'The Wind Rises' and 'The Tale of the Princess Kaguya'.
 
