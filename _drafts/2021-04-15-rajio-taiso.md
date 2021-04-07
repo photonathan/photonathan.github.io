@@ -18,7 +18,7 @@ There are two ways to implement this automation: The Easy Way (local file) and T
 2. Home Assistant software
 3. Google Home Mini
 
-```
+```{r}
 alias: Rajio Taiso
 description: ''
 trigger:
