@@ -3,6 +3,8 @@ layout: post
 title: "Rajio Taiso ラジオ体操"
 subtitle: "Automate stretch-breaks while working from home"
 background: /assets/img/posts/Rajio_Taiso/4S0A0496.jpg
+pagination: 
+  enabled: true
 ---
 
 ## Background
