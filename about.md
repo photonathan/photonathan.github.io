@@ -12,6 +12,6 @@ Like a lab notebook, I record my methods on this website not only for my future 
 
 Please send any comments or inquiries to [mail.nathansprojects@gmail.com](mailto:mail.nathansprojects@gmail.com)
 
-Video tutorial I used to create this website [Dataslice](https://www.youtube.com/watch?v=wCOInE7-E0I)
+Video tutorial I used to create this website [Dataslice](https://www.youtube.com/watch?v=wCOInE7-E0I)  
 Jekyll Theme used [Clean Blog Jekyll](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll)
 
