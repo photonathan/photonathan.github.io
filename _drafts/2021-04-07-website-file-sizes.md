@@ -16,10 +16,12 @@ Find the optimal export settings to minimize the file size of a photograph witho
 
 
 There are a few aspects I consider when using Lightroom to export an image for my website:
-1. DPI
-2. Resolution
-    The masthead photos included in the [Jekyll theme] (https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) I am using had a resolution of around 1900 x 1200 or 2,280,000 pixels and a file size of around 600KB. As I have chosen to optimize for 4K resolution, 3840 x 2160 or 8,294,400 pixels (~4x the number of pixels), my target file size will be less than (600KB * 4) =  2400KB or 2.4MB.
-3. Quality  
+1. #### DPI  
+DPI doesn't matter
+2. #### Resolution  
+The masthead photos included in the [Jekyll theme](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) I am using had a resolution of around *1900 x 1200* or *2,280,000* pixels and a file size of around *600KB*. As I have chosen to optimize for 4K resolution, *3840 x 2160* or *8,294,400* pixels (~**4x** the number of pixels), my target file size will be less than (600KB * **4**) =  *2400KB* or *2.4MB*.
+3. #### Quality  
+Quality is important  
   
 ### Note
 Once I get some sort of analytics running, it would be nice to take some quantitative measurements on how quickly pages actually load.

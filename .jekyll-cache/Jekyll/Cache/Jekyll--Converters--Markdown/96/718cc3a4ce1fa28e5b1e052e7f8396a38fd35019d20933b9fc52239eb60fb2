@@ -1,4 +1,4 @@
-I";<h2 id="background">Background</h2>
+I"	<h2 id="background">Background</h2>
 
 <p>All the photographs on this website are taken by me. As such, it is up to me to optimize their file size vs quality when exporting. The majority of the photographs were taken with a Canon 5D Mark III so the exported jpeg files can be around 12MB in size. For reference, the photos that were included with this Jekyll theme were around 600KB… 20 times smaller.</p>
 
@@ -8,10 +8,16 @@
 
 <p>There are a few aspects I consider when using Lightroom to export an image for my website:</p>
 <ol>
-  <li>DPI</li>
-  <li>Resolution
- The masthead photos included in the [Jekyll theme] (https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) I am using had a resolution of around 1900 x 1200 or 2,280,000 pixels and a file size of around 600KB. As I have chosen to optimize for 4K resolution, 3840 x 2160 or 8,294,400 pixels (~4x the number of pixels), my target file size will be less than (600KB * 4) =  2400KB or 2.4MB.</li>
-  <li>Quality</li>
+  <li>
+    <h6 id="dpi">DPI</h6>
+  </li>
+  <li>
+    <h6 id="resolution">Resolution</h6>
+    <p>The masthead photos included in the <a href="https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll">Jekyll theme</a> I am using had a resolution of around <em>1900 x 1200</em> or <em>2,280,000</em> pixels and a file size of around <em>600KB</em>. As I have chosen to optimize for 4K resolution, <em>3840 x 2160</em> or <em>8,294,400</em> pixels (~<strong>4x</strong> the number of pixels), my target file size will be less than (600KB * <strong>4</strong>) =  <em>2400KB</em> or <em>2.4MB</em>.</p>
+  </li>
+  <li>
+    <h6 id="quality">Quality</h6>
+  </li>
 </ol>
 
 <h3 id="note">Note</h3>
