@@ -4,6 +4,9 @@
 
 {% include head.html %}
 
+{% if jekyll.environment == 'production' %}
+{% include google-analytics.html %}
+{% endif %}
 <body>
 
   {% include navbar.html %}
@@ -14,9 +17,7 @@
 
   {% include scripts.html %}
 
-  {% if jekyll.environment == 'production' %}
-  {% include google-analytics.html %}
-  {% endif %}
+
 
 </body>
 
