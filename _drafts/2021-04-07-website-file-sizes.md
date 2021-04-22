@@ -2,7 +2,7 @@
 layout: post
 title: "Optimizing image quality for my website"
 subtitle: "Determining the optimal Lightroom settings when exporting photographs for my website"
-background: /assets/img/posts/Rajio_Taiso/4S0A0496.jpg
+background: /assets/img/posts/image_export_settings/web_export_settings.jpg
 pagination: 
 enabled: true
 ---
@@ -27,7 +27,11 @@ DPI stands for 'dots per inch.' When printing an image, this setting tells your 
 ##### Note:
 The images may be displayed off if you are viewing on mobile. I've hardcoded the images to display at their native resolution to give the most accurate representation of how dpi/ppi affects web images. I list the code used to display the images with hardcoded resolutions below the images.
 
-![1 ppi](/assets/img/posts/image_export_settings/1_ppi.jpg){:width="600px" height="400px"} ![300 ppi](/assets/img/posts/image_export_settings/300_ppi.jpg){:width="600px" height="400px"}
+![1 ppi](/assets/img/posts/image_export_settings/1_ppi.jpg){:width="600px" height="400px"} 
+
+![300 ppi](/assets/img/posts/image_export_settings/300_ppi.jpg){:width="600px" height="400px"}
+
+
 
 ###### Code:
 \!\[1 ppi](/img/website_file_size/1_ppi.jpg)<mark>{:width="600px" height="400px"}</mark>
@@ -39,11 +43,52 @@ The images may be displayed off if you are viewing on mobile. I've hardcoded the
 
 An image 1920 x 1080 will always be 1920 pixels long and 1080 pixels wide. Any hardware/software magic your computer may preform to upscale an image, an image with a native resolution at 1920 x 1080 pixels displayed on a monitor with 3840 x 2160 resolution will not look as good as an the same image with a native resolution of 3840 x 2160.
 
- Best, case scenario, the image will just not fill the entire screen, with the worst case being the image will be stretched to fill the screen to the point where you can start to see the pixels of the image. 
-The masthead photos included in the [Jekyll theme](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) I am using had a resolution of around *1900 x 1200* or *2,280,000* pixels and a file size of around *600KB*. As I have chosen to optimize for 4K resolution, *3840 x 2160* or *8,294,400* pixels (~**4x** the number of pixels), my target file size will be less than (600KB * **4**) =  *2400KB* or *2.4MB*.
+Best, case scenario, the image will just not fill the entire screen, with the worst case being the image will be stretched to fill the screen to the point where you can start to see the individual pixels of the image. 
+The masthead photos included in the [Jekyll theme](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) I am using had a resolution of around *1900 x 1200* or *2,280,000* pixels and a file size of around *600 KB*. As I have chosen to optimize for 4K resolution, *3840 x 2160* or *8,294,400* pixels (~**4x** the number of pixels), my target file size will be less than (600KB * **4**) =  *2400KB* or *2.4MB*.
 
-# 3. Quality  
-When exporting in lightroom, you're given the option to adjust the 'quality' of the image from 1-100%. Below are examples of 10 images, each imaged reduced in quality by 10%. I zoomed into the image to get a better idea of how quality affects an image's details.
+# 3. Quality
+When exporting in lightroom, you're given the option to adjust the 'quality' of the image from 1-100. I'll first compare the difference between 100 quality and 10 quality to get a good idea of what to look for as far as image degradation. Right click on the image and open in new tab to see it at its full resolution. To easily compare images use 'ctrl + Tab' and 'ctrl + Shift + Tab' to cycle through browser tabs quickly.
+
+<!-- Row  -->
+<div class="row"> 
+  <!-- Column 1 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\tree_100.jpg">
+      <figcaption>Tree 100</figcaption>
+    </figure>
+  </div>
+  <!-- Column 2 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\tree_10.jpg">
+      <figcaption>Tree 10</figcaption>
+    </figure>
+  </div>
+</div>
+
+<!-- Row  -->
+<div class="row"> 
+  <!-- Column 1 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\sky_100.jpg">
+      <figcaption>Sky 100</figcaption>
+    </figure>
+  </div>
+  <!-- Column 2 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\sky_10.jpg">
+      <figcaption>Sky 10</figcaption>
+    </figure>
+  </div>
+</div>
+
+You can see obvious bands of color in the sky images as the color changes between different shades of blue. The tree image is less obvious to my eye but there is is definitly a reduction in sharpness.  
+
+Below are examples of 10 cropped images with each reduced in quality by 10. I can't see myself cropping an image this much normally so this will test an edge-case. Images were exported with a 'long edge' of 1880px. 
+
 
 <!-- Row  -->
 <div class="row"> 
@@ -51,33 +96,91 @@ When exporting in lightroom, you're given the option to adjust the 'quality' of 
   <div class="col-lg-6 col-md-6">
     <figure class="image">
       <img style="width: 100%;" src="/assets\img\posts\image_export_settings\100.jpg">
-      <figcaption>Caption1</figcaption>
+      <figcaption>Quality 100</figcaption>
     </figure>
   </div>
   <!-- Column 2 -->
   <div class="col-lg-6 col-md-6">
     <figure class="image">
       <img style="width: 100%;" src="/assets\img\posts\image_export_settings\90.jpg">
-      <figcaption>Caption2</figcaption>
+      <figcaption>Quality 90</figcaption>
     </figure>
   </div>
 </div>
 
+<!-- Row  -->
+<div class="row"> 
+  <!-- Column 1 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\80.jpg">
+      <figcaption>Quality 80</figcaption>
+    </figure>
+  </div>
+  <!-- Column 2 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\70.jpg">
+      <figcaption>Quality 70</figcaption>
+    </figure>
+  </div>
+</div>
 
+<!-- Row  -->
+<div class="row"> 
+  <!-- Column 1 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\60.jpg">
+      <figcaption>Quality 60</figcaption>
+    </figure>
+  </div>
+  <!-- Column 2 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\50.jpg">
+      <figcaption>Quality 50</figcaption>
+    </figure>
+  </div>
+</div>
 
-![100% Quality](/assets\img\posts\image_export_settings\90.jpg){:width="49%"}
-<div class="photo-caption">caption</div>
+<!-- Row  -->
+<div class="row"> 
+  <!-- Column 1 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\40.jpg">
+      <figcaption>Quality 40</figcaption>
+    </figure>
+  </div>
+  <!-- Column 2 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\30.jpg">
+      <figcaption>Quality 30</figcaption>
+    </figure>
+  </div>
+</div>
 
-![100% Quality](/assets\img\posts\image_export_settings\80.jpg){:width="30%"}
-<div class="photo-caption">caption</div>
+<!-- Row  -->
+<div class="row"> 
+  <!-- Column 1 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\20.jpg">
+      <figcaption>Quality 20</figcaption>
+    </figure>
+  </div>
+  <!-- Column 2 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\10.jpg">
+      <figcaption>Quality 10</figcaption>
+    </figure>
+  </div>
+</div>
 
-![100% Quality](/assets\img\posts\image_export_settings\70.jpg){:width="100%"}
-![100% Quality](/assets\img\posts\image_export_settings\60.jpg){:width="100%"}
-![100% Quality](/assets\img\posts\image_export_settings\50.jpg){:width="100%"}
-![100% Quality](/assets\img\posts\image_export_settings\40.jpg){:width="100%"}
-![100% Quality](/assets\img\posts\image_export_settings\30.jpg){:width="100%"}
-![100% Quality](/assets\img\posts\image_export_settings\20.jpg){:width="100%"}
-![100% Quality](/assets\img\posts\image_export_settings\10.jpg){:width="100%"}
+I started to see banding in the sky and a slight reduction in sharpness in the tree at around 40 quality. To my eye, the images at quality 100 compared to quality 50 are indiscernible. At 100 quality the image is 2.49 MB and at 50 quality the image is 623 KB. With a file size at around 4 times as small, the 50 quality looks to be good balance between file size and image quality. 
 
 # 4. Masthead *vs* Body
 There are two scenarios where images will be displayed:
@@ -105,7 +208,25 @@ Below is an image exported with a width of 1880px. It looks great on my monitor,
 ![1880px width](/assets\img\posts\image_export_settings\1880_width.jpg){:width="100%"}
 
 # Conclusion
-Exporting a masthead image is fairly straight forward in terms of resolution. The width of masthead images needs to be 3840px wide. The lightrom 'quality' to export at is more subjective but it seems to me that...
+## DPI/PPI
+DPI/PPI only matter when printing an image so it doesn't matter what this is set to.
+
+## Resolution
+Exporting a 'masthead' image is fairly straight forward in terms of resolution. The width of masthead images needs to be 3840px wide. 
+
+Most of the 'body' images will have this bit of code at the end that forces the image to span the entire body of the site, regardless of the resolution of a monitor. This means that to optimize for 4K monitors, the width of a 'body' image needs to be 1880px wide.
+
+## Quality
+
+ The most efficient Lightrom 'quality' to export at is more subjective than 'resolution' and will differ between images. 
+
+## Creating the Lightoom presets
+I'll create two presets in Lightroom, one for the 'masthead web' and one for 'body web.' In the export box, I clicked 'Add' in the bottom left to add two presets and renamed them. Then I set the quality, resolution, format... etc, right clicked on the preset I wanted to assign those settings to and clicked "Update with Current Settings." Rinse and repeat for the other preset. 
+
+![Lightroom Export Dialoge Box](/assets\img\posts\image_export_settings\export_box.jpg){:width="100%"}
+
+Now, applying the proper export settings is as easy as 1 click!
+
 # Future
 Once I get some sort of analytics running, it would be nice to take some quantitative measurements on how quickly pages actually load.
 
@@ -137,3 +258,22 @@ bundle exec jekyll serve --drafts
 
 ###### Highlight text using \<mark></mark>
 <mark>{:width="600px" height="400px"}</mark>
+
+###### Creating two columns in bootstrap
+<!-- Row  -->
+<div class="row"> 
+  <!-- Column 1 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\60.jpg">
+      <figcaption>Quality 60</figcaption>
+    </figure>
+  </div>
+  <!-- Column 2 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\50.jpg">
+      <figcaption>Quality 50</figcaption>
+    </figure>
+  </div>
+</div>
