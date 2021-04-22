@@ -4,7 +4,7 @@ title: "Optimizing image quality for my website"
 subtitle: "Determining the optimal Lightroom settings when exporting photographs for my website"
 background: /assets/img/posts/Rajio_Taiso/4S0A0496.jpg
 pagination: 
-  enabled: true
+enabled: true
 ---
 # Background
 
@@ -25,7 +25,7 @@ There are a few aspects I consider when using Lightroom to export an image for m
 DPI stands for 'dots per inch.' When printing an image, this setting tells your printer how many dots of ink should be printed in every 1" of your image. PPI (pixels per inch) is a similar measurement of density, however instead of dots it refers to pixels per inch. However, your computer doesn't print the image to your screen, it simply displays the image per its set resolution. Compare the two images below. One is exported with a ppi of 1 and the other is exported with a ppi of 300. Can you tell the difference? Both images have a resolution of 600 x 400 and a file size of 279 KB. The first image is exported with a ppi of 1 and the second image is exported at a ppi of 300.
 
 ##### Note:
-The images may be displayed off if you are viewing on mobile. I've hardcoded the images to display at their native resolution to give the most accurate representation of how dpi/ppi affects web images. I list the code used to display the images with hardcoded resolution below the images.
+The images may be displayed off if you are viewing on mobile. I've hardcoded the images to display at their native resolution to give the most accurate representation of how dpi/ppi affects web images. I list the code used to display the images with hardcoded resolutions below the images.
 
 ![1 ppi](/assets/img/posts/image_export_settings/1_ppi.jpg){:width="600px" height="400px"} ![300 ppi](/assets/img/posts/image_export_settings/300_ppi.jpg){:width="600px" height="400px"}
 
@@ -43,7 +43,41 @@ An image 1920 x 1080 will always be 1920 pixels long and 1080 pixels wide. Any h
 The masthead photos included in the [Jekyll theme](https://github.com/StartBootstrap/startbootstrap-clean-blog-jekyll) I am using had a resolution of around *1900 x 1200* or *2,280,000* pixels and a file size of around *600KB*. As I have chosen to optimize for 4K resolution, *3840 x 2160* or *8,294,400* pixels (~**4x** the number of pixels), my target file size will be less than (600KB * **4**) =  *2400KB* or *2.4MB*.
 
 # 3. Quality  
-When exporting in lightroom, I'm given the option to adjust the 'quality' of the image from 1-10.
+When exporting in lightroom, you're given the option to adjust the 'quality' of the image from 1-100%. Below are examples of 10 images, each imaged reduced in quality by 10%. I zoomed into the image to get a better idea of how quality affects an image's details.
+
+<!-- Row  -->
+<div class="row"> 
+  <!-- Column 1 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\100.jpg">
+      <figcaption>Caption1</figcaption>
+    </figure>
+  </div>
+  <!-- Column 2 -->
+  <div class="col-lg-6 col-md-6">
+    <figure class="image">
+      <img style="width: 100%;" src="/assets\img\posts\image_export_settings\90.jpg">
+      <figcaption>Caption2</figcaption>
+    </figure>
+  </div>
+</div>
+
+
+
+![100% Quality](/assets\img\posts\image_export_settings\90.jpg){:width="49%"}
+<div class="photo-caption">caption</div>
+
+![100% Quality](/assets\img\posts\image_export_settings\80.jpg){:width="30%"}
+<div class="photo-caption">caption</div>
+
+![100% Quality](/assets\img\posts\image_export_settings\70.jpg){:width="100%"}
+![100% Quality](/assets\img\posts\image_export_settings\60.jpg){:width="100%"}
+![100% Quality](/assets\img\posts\image_export_settings\50.jpg){:width="100%"}
+![100% Quality](/assets\img\posts\image_export_settings\40.jpg){:width="100%"}
+![100% Quality](/assets\img\posts\image_export_settings\30.jpg){:width="100%"}
+![100% Quality](/assets\img\posts\image_export_settings\20.jpg){:width="100%"}
+![100% Quality](/assets\img\posts\image_export_settings\10.jpg){:width="100%"}
 
 # 4. Masthead *vs* Body
 There are two scenarios where images will be displayed:
@@ -57,8 +91,21 @@ However in the body of the post, the image does not need to fill the entire widt
 
 ![white space](/assets\img\posts\image_export_settings\white_space.jpg){:width="100%"}
 
+I order to know how large a 'body' image needs to be, I'll measure one of the white bars on the side, multiply by 2, and subtract that from the total horizontal resolution to obtain the width of the body. Here is a problem, my monitor is not 4K so I'm going to have to do some additional math to know how wide to make my images. Because I know that the width of my monitor (1920px) and a 4K Monitor (3840px)  are the same, I can multiply my calculation by 2 to obtain the final 4K resolution in the end.
+
+Here, I used Photoshop to measure the white space on the left to be 490px. 
+
+![size of white bar](/assets\img\posts\image_export_settings\size_of_white_bar.jpg){:width="100%"}
+
+##### Calculations
+Left + right bars = 980px. Total horizontal resolution (1920px) - Left and right bars (980px) = Size of body(940px).
+Size of body (940px) * 4K size factor (2) = 1,880px
+
+Below is an image exported with a width of 1880px. It looks great on my monitor, I'll need to confirm how it looks on a 4K monitor.
+![1880px width](/assets\img\posts\image_export_settings\1880_width.jpg){:width="100%"}
+
 # Conclusion
-Exporting a masthead image is fairly straight forward in terms of resolution. The width of masthead images needs to be 3840px wide. The quality 
+Exporting a masthead image is fairly straight forward in terms of resolution. The width of masthead images needs to be 3840px wide. The lightrom 'quality' to export at is more subjective but it seems to me that...
 # Future
 Once I get some sort of analytics running, it would be nice to take some quantitative measurements on how quickly pages actually load.
 
