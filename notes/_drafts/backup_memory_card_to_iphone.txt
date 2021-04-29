@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: post
 title: "backup_memory_card"
+background: /assets/img/posts/Rajio_Taiso/4S0A0496.jpg
 category: notes
 ---
 
