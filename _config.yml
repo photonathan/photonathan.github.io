@@ -27,5 +27,7 @@ plugins:
 collections:
   notes:
     output: true
+    permalink: /notes/:path/
   projects:
     output: true
+    permalink: /projects/:path/
